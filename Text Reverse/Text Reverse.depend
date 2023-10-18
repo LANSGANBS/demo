@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1695215374 source:c:\users\18019\desktop\c++ื๗าต\text reverse\main.cpp
+	<stdio.h>
+	<string.h>
+	<iostream>
+	<algorithm>
+

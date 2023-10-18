@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1695207163 source:c:\users\18019\desktop\c++作业\另一种写法\main.cpp
+	<iostream>
+	<string.h>
+	<string>
+
