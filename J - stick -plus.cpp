@@ -22,21 +22,21 @@ int main()
     {
         int n, m;
         cin >> n >> m;
-        int a[n];
+        int arr[n];
         for (int i = 0; i < n; i++)
         {
-            cin >> a[i];
+            cin >> arr[i];
         }
-        int left = 1, right = *max_element(a, a + n);
+        int left = 1, right = *max_element(arr, arr + n);
         while (left <= right)
         {
             int mid = (left + right) / 2;
-            int cuts = 0;
+            int a = 0;
             for (int i = 0; i < n; i++)
             {
-                cuts += (a[i] - 1) / mid;
+                a += (arr[i] - 1) / mid;
             }
-            if (cuts > m)
+            if (a > m)
             {
                 left = mid + 1;
             }
