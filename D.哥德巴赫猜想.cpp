@@ -1,8 +1,7 @@
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
 using namespace std;
-
-int main() {
+int main()
+{
     string s;
     char c;
     getline(cin, s);
