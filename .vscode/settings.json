@@ -68,6 +68,7 @@
         "scoped_allocator": "cpp",
         "shared_mutex": "cpp",
         "thread": "cpp",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "o数字黑洞cpp": "cpp"
     }
 }
