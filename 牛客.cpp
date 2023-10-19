@@ -20,6 +20,7 @@ int count_sevens(long long n)
             count++;
         }
         n /= 10;
+        
     }
     return count;
 }
