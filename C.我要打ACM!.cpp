@@ -66,24 +66,24 @@ int main()
             submitted[i] = {name, status, prb, t};
         }
         sort(submitted.begin(), submitted.end(), cmpTime);
-        for (const auto &submission : submitted)
+        for (const auto &submitted : submitted)
         {
             for (auto &team : teams)
             {
-                if (team.name == submission.name)
+                if (team.name == submitted.name)
                 {
-                    if (submission.t < 300)
+                    if (submitted.t < 300)
                     {
-                        if (submission.status == "AC" && team.submitted[submission.prb[0]].first >= 0)
+                        if (submitted.status == "AC" && team.submitted[submitted.prb[0]].first >= 0)
                         {
                             team.ac++;
-                            team.pending += submission.t + team.submitted[submission.prb[0]].first * 20;
-                            team.submitted[submission.prb[0]].first = -1;
+                            team.pending += submitted.t + team.submitted[submitted.prb[0]].first * 20;
+                            team.submitted[submitted.prb[0]].first = -1;
                             break;
                         }
-                        else if (submission.status != "CE" && team.submitted[submission.prb[0]].first != -1)
+                        else if (submitted.status != "CE" && team.submitted[submitted.prb[0]].first != -1)
                         {
-                            team.submitted[submission.prb[0]].first++;
+                            team.submitted[submitted.prb[0]].first++;
                         }
                     }
                 }
