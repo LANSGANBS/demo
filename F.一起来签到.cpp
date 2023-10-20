@@ -12,5 +12,5 @@ const ll CF = 2e5 + 9;
 const ll mod = 1e9 + 7;
 int main()
 {
-    cout << "\\/genshin impact/\\'\"\\n\"" ;
+    cout << R"(\/genshin impact/\'"\n")";
 }
