@@ -12,19 +12,5 @@ const ll CF=2e5+9;
 const ll mod=1e9+7;
 signed main()
 {
-    int T;
-    T=1;
-    //cin>>T;
-    while (T--)
-    {
-        int l=1,r=100;
-        int x=25;
-        while (l<=r)
-        {
-            int mid=(l+r)>>1;
-            cout <<l<<' '<<r<<"-------"<<endl;
-            if (mid<=x) l=mid+1;
-            else r=mid-1;
-        }
-    }
+    
 }
