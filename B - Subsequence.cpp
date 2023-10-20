@@ -1,32 +1,42 @@
-#include <bits/stdc++.h>
-#define endl '\n'
-#define buff ios::sync_with_stdio(false), cin.tie(nullptr), cout.tie(nullptr);
+#include <iostream>
+#include <algorithm>
 using namespace std;
-typedef long long ll;
-typedef pair<ll, ll> pll;
-typedef vector<ll> vll;
-typedef vector<pair<ll, ll>> vpll;
-const ll MAX_INT = 0x3f3f3f3f;
-const ll MAX_LL = 0x3f3f3f3f3f3f3f3f;
-const ll CF = 2e5 + 9;
-const ll mod = 1e9 + 7;
-void solve()
-{
-    int t,m,n;
-    cin >>t;
-    while (t--)
-    {
-        cin>>m>>n;
-    }
-}
 int main()
 {
-    ios::sync_with_stdio(0);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    int T;
-    T = 1;
-    while (T--)
-        solve();
-    return 0;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int N = 0, S = 0;
+        cin >> N >> S;
+        int a[N];
+        for (int i = 0; i < N; i++)
+        {
+            cin >> a[i];
+        }
+        int sum = 0, start = 0, end = 0, minLen = N + 1;
+        while (end < N)
+        {
+            while (sum <= S && end < N)
+            {
+                sum += a[end++];
+            }
+            while (sum > S && start < N)
+            {
+                if (end - start < minLen)
+                {
+                    minLen = end - start;
+                }
+                sum -= a[start++];
+            }
+        }
+        if (minLen == N + 1)
+        {
+            cout << 0 << endl;
+        }
+        else
+        {
+            cout << minLen << endl;
+        }
+    }
 }
