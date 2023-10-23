@@ -1,43 +1,41 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
-
+void solve()
+{
+    int n, m;
+    cin >> n >> m;
+    vector<int> nums(n);
+    int ans = 6, cnt1 = 0, cnt2 = 0;
+    for (int i = 0; i < n; i++)
+        cin >> nums[i];
+    for (int i = 0; i < n; i++)
+    {
+        nums[i] = nums[i] % m;
+        if (nums[i] == 0)
+            ans = 0;
+        else
+            ans = min(ans, m - nums[i]);
+        if (nums[i] % 2 == 0)
+            cnt2++;
+        else
+            cnt1++;
+    }
+    if (m == 4 && cnt1)
+    {
+        if (cnt2)
+            ans = min(ans, 1);
+        else if (cnt1 > 1)
+            ans = min(ans, 2);
+    }
+    if (m == 4 && cnt2 > 1)
+        ans = min(ans, 0);
+    cout << ans << endl;
+}
 int main()
 {
     int t;
     cin >> t;
     while (t--)
-    {
-        int n, k;
-        cin >> n >> k;
-        vector<int> a(n);
-        for (int i = 0; i < n; ++i)
-        {
-            cin >> a[i];
-        }
-
-        vector<int> count(k, 0);
-        for (int i = 0; i < n; ++i)
-        {
-            count[a[i] % k]++;
-        }
-
-        int operations = 0;
-        for (int i = 1; i <= k / 2; ++i)
-        {
-            if (i != k - i)
-            {
-                operations += max(count[i], count[k - i]);
-            }
-            else
-            {
-                operations += count[i] / 2;
-            }
-        }
-        operations += count[0];
-
-        cout << operations << endl;
-    }
-
+        solve();
     return 0;
 }
