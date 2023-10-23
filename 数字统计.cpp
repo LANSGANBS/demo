@@ -10,26 +10,28 @@ const ll MAX_INT = 0x3f3f3f3f;
 const ll MAX_LL = 0x3f3f3f3f3f3f3f3f;
 const ll CF = 2e5 + 9;
 const ll mod = 1e9 + 7;
-int solve(int a)
+void solve()
 {
-    int ans=1;
-    for (int i = 1; i <= a; i++)
-    {
-        ans *= i;
-    }
-    return ans;
 }
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n;
-    cin >> n;
-    int sum = 0;
-    for (int i = 1; i <= n; i++)
+    int L, R;
+    cin >> L >> R;
+    int count = 0;
+    for (int i = L; i <= R; i++)
     {
-        sum += solve(i);
+        string num = to_string(i);
+        for (char c : num)
+        {
+            if (c == '2')
+            {
+                count++;
+            }
+        }
     }
-    cout << sum << endl;
+    cout << count << endl;
+    return 0;
 }
