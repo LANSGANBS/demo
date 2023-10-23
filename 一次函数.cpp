@@ -18,21 +18,13 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n;
-    cin >> n;
-    if (n == 1)
+    int n,k,b,ans=0;
+    cin >> n >> k >> b;
+    while (n--)
     {
-        cout << "No" << endl;
-        return 0;
+        int x,y;
+        cin >> x >> y;
+        if ((k*x+b)==y) ans++;
     }
-    for (int i = 2; i <= sqrt(n); i++)
-    {
-        if (n % i == 0)
-        {
-            cout << "No" << endl;
-            return 0;
-        }
-    }
-    cout << "Yes" << endl;
-    return 0;
+    cout << ans << endl;
 }

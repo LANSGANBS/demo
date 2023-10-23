@@ -20,19 +20,14 @@ int main()
     cout.tie(NULL);
     int n;
     cin >> n;
-    if (n == 1)
+    bitset<32> binary(n);
+    int count = 0;
+    for (int i = 0; i < binary.size(); i++)
     {
-        cout << "No" << endl;
-        return 0;
-    }
-    for (int i = 2; i <= sqrt(n); i++)
-    {
-        if (n % i == 0)
+        if (binary[i] == 1)
         {
-            cout << "No" << endl;
-            return 0;
+            count++;
         }
     }
-    cout << "Yes" << endl;
-    return 0;
+    cout << count << endl;
 }

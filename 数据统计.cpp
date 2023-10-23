@@ -18,21 +18,11 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n;
-    cin >> n;
-    if (n == 1)
+    long double a, b, c;
+    while (cin >> a >> b >> c)
     {
-        cout << "No" << endl;
-        return 0;
+        cout << min(min(a, b), c) << ' ';
+        cout << max(max(a, b), c) << ' ';
+        cout << fixed << setprecision(3) << (a + b + c) / 3 << endl;
     }
-    for (int i = 2; i <= sqrt(n); i++)
-    {
-        if (n % i == 0)
-        {
-            cout << "No" << endl;
-            return 0;
-        }
-    }
-    cout << "Yes" << endl;
-    return 0;
 }

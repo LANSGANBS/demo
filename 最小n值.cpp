@@ -10,29 +10,28 @@ const ll MAX_INT = 0x3f3f3f3f;
 const ll MAX_LL = 0x3f3f3f3f3f3f3f3f;
 const ll CF = 2e5 + 9;
 const ll mod = 1e9 + 7;
-void solve()
+int solve(int m)
 {
+    ios::sync_with_stdio(0);
+    cin.tie(NULL);
+    cout.tie(NULL);
+    int n = 1;
+    double sum = 0;
+    while (sum < m)
+    {
+        sum += 1.0 / n;
+        n++;
+    }
+    return n - 1;
 }
+
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n;
-    cin >> n;
-    if (n == 1)
-    {
-        cout << "No" << endl;
-        return 0;
-    }
-    for (int i = 2; i <= sqrt(n); i++)
-    {
-        if (n % i == 0)
-        {
-            cout << "No" << endl;
-            return 0;
-        }
-    }
-    cout << "Yes" << endl;
+    int m;
+    cin >> m;
+    cout << solve(m);
     return 0;
 }

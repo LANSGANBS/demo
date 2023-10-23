@@ -18,7 +18,7 @@ int main()
     ios::sync_with_stdio(0);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n;
+    ll n;
     cin >> n;
     if (n == 1)
     {
