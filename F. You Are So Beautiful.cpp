@@ -16,13 +16,4 @@ void solve()
 int main()
 {
     buff;
-    int a, b, c;
-    vll vec;
-    cin >> a >> b >> c;
-    vec.push_back(a);
-    vec.push_back(b);
-    vec.push_back(c);
-    sort(vec.begin(), vec.end());
-    ll gcd = __gcd(vec[0], vec[2]);
-    cout << vec[0] / gcd << "/" << vec[2] / gcd << endl;
 }
