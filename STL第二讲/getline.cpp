@@ -8,7 +8,7 @@ int main()
 	*/
 	// 类似与输入这样的，一行内带有空格的字符串，cin是很难读入的，所以我们需要用到getline来读入
 	string str;
-	getline(cin,str);
+	getline(cin, str);
 	cout << str << endl;
 	// 只需要把str改成你的string的名称即可，其他不需要改动
 	// 但是要注意，getline遇到回车会停止读入(会把回车读掉，但是不算作字符串的一部分)，但是cin不会读入回车
@@ -25,13 +25,10 @@ int main()
 	string str1;
 	cin >> t;
 	getchar();
-	while(t--) {
-		getline(cin,str1);
+	while (t--)
+	{
+		getline(cin, str1);
 		cout << str1 << endl;
-	}	
-    return 0;
+	}
+	return 0;
 }
-
-
-
-
