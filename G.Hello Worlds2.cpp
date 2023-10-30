@@ -24,7 +24,7 @@ void solve()
     cin.ignore();
     getline(cin, s);
     bool found = 0; // 标记是否找到过"Hello World"
-    int offset = 0;     // 记录已经删除的字符数
+    int offset = 0; // 记录已经删除的字符数
     while (!s.empty())
     {
         int index = s.find("Hello World");
