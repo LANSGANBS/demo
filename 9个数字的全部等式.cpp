@@ -15,23 +15,21 @@ const ll MAX_INT = 0x3f3f3f3f;
 const ll MAX_LL = 0x3f3f3f3f3f3f3f3f;
 const ll CF = 2e5 + 9;
 const ll mod = 1e9 + 7;
-ll n;
-ll a[CF], vis[CF];
+int a[CF], vis[CF];
 
 void dfs(ll x)
 {
-    if (x == n + 1)
+    if (x == 10)
     {
-        for (int i = 1; i <= n; ++i)
+        if (a[1] * 100 + a[2] * 10 + a[3] + a[4] * 100 + a[5] * 10 + a[6] == a[7] * 100 + a[8] * 10 + a[9])
         {
-            cout << a[i] << ' ';
+            cout << a[1] << a[2] << a[3] << "+" << a[4] << a[5] << a[6] << "=" << a[7] << a[8] << a[9] << endl;
         }
-        cout << endl;
         return;
     }
-    for (int i = 1; i <= n; ++i)
+    for (int i = 0; i < 10; ++i)
     {
-        if (vis[i] == 0) // 牌还在手里
+        if (vis[i] == 0)
         {
             a[x] = i;
             vis[i] = 1;
@@ -44,11 +42,7 @@ void dfs(ll x)
 
 int main()
 {
-
-    while (cin >> n)
-    {
-        memset(vis, 0, sizeof(vis));
-        dfs(1);
-    }
+    memset(vis, 0, sizeof(vis));
+    dfs(1);
     return 0;
 }
