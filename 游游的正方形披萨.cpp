@@ -18,13 +18,19 @@ const ll mod = 1e9 + 7;
 
 void solve()
 {
+    int n, m;
+    cin >> n >> m;
+    int half = m / 2;
+    int ans = (half + 1) * (m - half + 1);
+    double res = 1.0 * n * n / (ans);
+    cout << fixed << setprecision(2) << res << endl;
 }
 
 int main()
 {
     buff;
     int t = 1;
-    //	cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

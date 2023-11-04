@@ -18,13 +18,22 @@ const ll mod = 1e9 + 7;
 
 void solve()
 {
+    vector<int> s(4);
+    for (int i = 0; i < 4; i++)
+        cin >> s[i];
+    int mx1 = max(s[0], s[1]), mx2 = max(s[2], s[3]);
+    sort(s.begin(), s.end());
+    if ((mx1 == s[2] || mx1 == s[3]) && (mx2 == s[2] || mx2 == s[3]))
+        cout << "YES\n";
+    else
+        cout << "NO\n";
 }
 
 int main()
 {
     buff;
-    int t = 1;
-    //	cin >> t;
+    int t;
+    cin >> t;
     while (t--)
     {
         solve();
