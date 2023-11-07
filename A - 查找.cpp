@@ -22,23 +22,22 @@ int main()
     {
         cin >> a[i];
     }
-    sort(a, a + n);
     for (int i = 0; i < m; i++)
     {
         int q;
         cin >> q;
-        int left = 0, right = n - 1, ans = -1;
-        while (left <= right)
+        int l = 0, r = n - 1, ans = -1;
+        while (l <= r)
         {
-            int mid = (left + right) / 2;
+            int mid = (l + r) >> 1;
             if (a[mid] >= q)
             {
                 ans = mid;
-                right = mid - 1;
+                r = mid - 1;
             }
             else
             {
-                left = mid + 1;
+                l = mid + 1;
             }
         }
         if (ans == -1 || a[ans] != q)
